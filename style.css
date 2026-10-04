@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Libertinus Math", "Georgia", serif;
+  color: #3b2f2f;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Giriş sayfası: arka plan + ortada isim + MENU tuşu */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("bulut1.jpeg") center / cover no-repeat;
+}
+
+/* Menü, Hakkında, İletişim, Yayınlar ve kategori sayfaları için ortak düzen */
+.page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #99bddd; /* bebek mavisi */
+  padding: 0 20px 40px;
+}
+
+/* Yayınlar altındaki kategori sayfaları: kırık beyaz */
+.page.pub-page {
+  background: #f8f6f2;
+}
+
+/* Üstteki bar: sol tarafta MENU linki, sağ tarafta dil seçeneği + sosyal ikonlar.
+   Normal akışta yer kaplar, böylece hiçbir içerik altına girmez. */
+.site-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+  background: rgba(0, 0, 0, 0.14);
+  z-index: 10;
+}
+
+/* Giriş sayfasında header, fotoğrafın üstünde şeffaf bir katman olarak durur */
+.hero .site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: none;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.lang-link {
+  font-size: 1.4rem;
+  transition: opacity 0.2s ease;
+}
+
+.lang-link:hover {
+  opacity: 0.6;
+}
+
+.social-icon {
+  display: inline-flex;
+  transition: opacity 0.2s ease;
+}
+
+.social-icon svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.social-icon:hover {
+  opacity: 0.6;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  padding-top: 24px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.hero-name {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  font-size: 2.2rem;
+  transition: opacity 0.2s ease;
+}
+
+.button:hover {
+  opacity: 0.6;
+}
+
+.button.small {
+  font-size: 1.6rem;
+}
+
+.text-page {
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.8;
+  font-size: 1.6rem;
+}
+
+/* Yayınlar kategori listesi (kapak fotoğrafı + hyperlink başlık) */
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.pub-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.pub-title {
+  font-size: 1.8rem;
+  transition: opacity 0.2s ease;
+}
+
+.pub-title:hover {
+  opacity: 0.6;
+}
+
+.pub-cover {
+  width: 200px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pub-cover.placeholder {
+  border: 2px dashed #3b2f2f;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.1rem;
+  opacity: 0.6;
+}
+
+.pub-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
