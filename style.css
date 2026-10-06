@@ -136,6 +136,11 @@ h1 {
   font-size: 1.6rem;
 }
 
+/* Birden fazla paragraflı metinlerde paragraflar arası boşluk */
+.text-page p + p {
+  margin-top: 1em;
+}
+
 .text-page {
   max-width: 600px;
   text-align: center;
